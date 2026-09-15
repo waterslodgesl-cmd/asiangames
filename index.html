@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Asian Games 2026">
+<meta name="theme-color" content="#0F172A">
+<title>Asian Games 2026 – Sri Lanka Contingent Logistics & Navigation Hub</title>
+<style>
+  :root {
+    --primary: #0F172A;
+    --primary-light: #1E293B;
+    --accent: #2563EB;
+    --accent-hover: #1D4ED8;
+    --success: #059669;
+    --warning: #D97706;
+    --danger: #DC2626;
+    --bg: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --border: #E2E8F0;
+    --text-main: #0F172A;
+    --text-muted: #64748B;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.4;
+    padding-bottom: 40px;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    color: #FFFFFF;
+    padding: 24px 16px 16px;
+    border-bottom: 3px solid #F59E0B;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .badge-tag {
+    background: #F59E0B;
+    color: #0F172A;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    color: #94A3B8;
+  }
+
+  .ios-tip {
+    background: rgba(255,255,255,0.08);
+    border: 1px dashed rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    color: #E2E8F0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .nav-tabs {
+    max-width: 1200px;
+    margin: 12px auto 0;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 12px 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .tab-btn.active {
+    background: #0F172A;
+    color: #FFFFFF;
+    border-color: #0F172A;
+    box-shadow: 0 2px 6px rgba(15,23,42,0.25);
+  }
+
+  .search-container {
+    max-width: 1200px;
+    margin: 10px auto 16px;
+    padding: 0 12px;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 10px 16px 10px 38px;
+    font-size: 0.9rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 12px;
+    background: #FFFFFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") no-repeat 12px center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    outline: none;
+  }
+  .search-box:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  .tab-panel {
+    display: none;
+  }
+  .tab-panel.active {
+    display: block;
+  }
+
+  .section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .section-header {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .section-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* Table styles */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    background: #FFFFFF;
+    text-align: left;
+  }
+
+  th {
+    background: #1E293B;
+    color: #FFFFFF;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:nth-child(even) {
+    background: #F8FAFC;
+  }
+
+  .dist-badge {
+    display: inline-block;
+    background: #ECFDF5;
+    color: #047857;
+    border: 1px solid #A7F3D0;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .time-badge {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1E40AF;
+    border: 1px solid #BFDBFE;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .status-eligible {
+    display: inline-block;
+    background: #DCFCE7;
+    color: #166534;
+    border: 1px solid #86EFAC;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+  }
+
+  .status-no-service {
+    display: inline-block;
+    background: #FFEDD5;
+    color: #9A3412;
+    border: 1px solid #FDBA74;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+  }
+
+  .map-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #0284C7;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.76rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background 0.15s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .map-btn:hover, .map-btn:active {
+    background: #0369A1;
+  }
+
+  .mobile-meta {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 30px;
+    padding: 12px;
+  }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 1.1rem; }
+    .table-wrap { font-size: 0.78rem; }
+    th, td { padding: 8px 8px; }
+    .map-btn { padding: 5px 8px; font-size: 0.72rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="title-row">
+      <h1>🇱🇰 Asian Games 2026 <span class="badge-tag">Japan Hub</span></h1>
+      <span style="font-size:0.75rem; color:#FCD34D; font-weight:600;">Sri Lanka Contingent</span>
+    </div>
+    <div class="subtitle">Aichi-Nagoya 2026 Logistics, Venues, Accommodations & Live Routes</div>
+    <div class="ios-tip">
+      <span>💡</span>
+      <span><strong>iPhone Tip:</strong> Tap <strong>Share [⎋]</strong> &rarr; <strong>"Add to Home Screen"</strong> in Safari for offline full-screen access!</span>
+    </div>
+  </div>
+</header>
+
+<div class="nav-tabs">
+  <button class="tab-btn active" onclick="showTab('tab-main', this)">📋 Master Schedule</button>
+  <button class="tab-btn" onclick="showTab('tab-opening', this)">🏟️ Opening Ceremony</button>
+  <button class="tab-btn" onclick="showTab('tab-village', this)">🏘️ Athletes Village</button>
+  <button class="tab-btn" onclick="showTab('tab-marriott', this)">🏨 Marriott Hotel</button>
+</div>
+
+<div class="search-container">
+  <input type="text" id="searchInput" class="search-box" placeholder="Search by sport, venue name, hotel, or location..." onkeyup="filterTables()">
+</div>
+
+<main>
+
+  <!-- TAB 1: MASTER SCHEDULE (ACCOMMODATION & VENUES) -->
+  <div id="tab-main" class="tab-panel active">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">📋 Official Sports, Venues & Accommodations Master Directory</div>
+        <div class="section-sub">Direct by-road vehicle distances and direct navigation between designated hotel and competition venue.</div>
+      </div>
+      <div class="table-wrap">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Sport / Discipline</th>
+              <th>Competition Venue</th>
+              <th>Cluster / Zone</th>
+              <th>Designated Hotel / Vessel</th>
+              <th>Road Dist.</th>
+              <th>Arrival & Departure</th>
+              <th>Competition Dates</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center; font-weight:600;">1</td>
+              <td style="font-weight:600; color:#0F172A;">Aquatics - Swimming</td>
+              <td>Tokyo Aquatics Centre </td>
+              <td style="color:#475569;">Tokyo</td>
+              <td>Tokyo Bay Shiomi Prince Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">1.2 km</span></td>
+              <td class="mobile-meta">Arr: 17/09<br>Dep: 25/09</td>
+              <td class="mobile-meta">20.09.2026 to<br>24.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Tokyo+Bay+Shiomi+Prince+Hotel&destination=Tokyo+Aquatics+Centre&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">—</td>
+              <td style="font-weight:600; color:#0F172A;">Aquatics - Diving</td>
+              <td>—</td>
+              <td style="color:#475569;">Tokyo</td>
+              <td>Tokyo Bay Shiomi Prince Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">1.2 km</span></td>
+              <td class="mobile-meta">Arr: 23/09<br>Dep: 01/10</td>
+              <td class="mobile-meta">26.09.2026 to<br>30.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Tokyo+Bay+Shiomi+Prince+Hotel&destination=Tokyo+Aquatics+Centre&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">2</td>
+              <td style="font-weight:600; color:#0F172A;">Archery - Compound</td>
+              <td>Okazaki Chuo Sogo Park Multipurpose Square</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">46.8 km</span></td>
+              <td class="mobile-meta">Arr: 22/09<br>Dep: 06/10</td>
+              <td class="mobile-meta">26.09.2026 to<br>01.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Okazaki+Chuo+Sogo+Park+Multipurpose+Square&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">3</td>
+              <td style="font-weight:600; color:#0F172A;">Gymnastics - Artistic Gymnastics</td>
+              <td>Nagoya City General Gymnasium
+［Rainbow Hall］</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">12.9 km</span></td>
+              <td class="mobile-meta">Arr: 17/09<br>Dep: 26/09</td>
+              <td class="mobile-meta">21.09.2026 to<br>25.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Nippon+Gaishi+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">4</td>
+              <td style="font-weight:600; color:#0F172A;">Judo</td>
+              <td>Aichi International Arena</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">24.8 km</span></td>
+              <td class="mobile-meta">Arr: 27/09<br>Dep: 03/10</td>
+              <td class="mobile-meta">30.09.2026 to<br>02.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Aichi+Prefectural+Gymnasium+Meijo+Park+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">5</td>
+              <td style="font-weight:600; color:#0F172A;">Rowing</td>
+              <td>Nagaragawa International Regatta Course</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">31.2 km</span></td>
+              <td class="mobile-meta">Arr: 17/09<br>Dep: 26/09</td>
+              <td class="mobile-meta">20.09.2026 to<br>25.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Nagaragawa+International+Regatta+Course+Kaizu+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">6</td>
+              <td style="font-weight:600; color:#0F172A;">Rugby sevens</td>
+              <td>Nagoya City Mizuho Park Rugby Field</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">23.2 km</span></td>
+              <td class="mobile-meta">Arr: 28/09<br>Dep: 04/10</td>
+              <td class="mobile-meta">01.10.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Paloma+Mizuho+Rugby+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">7</td>
+              <td style="font-weight:600; color:#0F172A;">Table Tennis</td>
+              <td>SKY HALL TOYOTA</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">46.3 km</span></td>
+              <td class="mobile-meta">Arr: 20/09<br>Dep: 28/09</td>
+              <td class="mobile-meta">23.09.2026 to<br>28.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Sky+Hall+Toyota+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">8</td>
+              <td style="font-weight:600; color:#0F172A;">Squash</td>
+              <td>Nagoya Kinjo-Futo Arena</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">1.7 km</span></td>
+              <td class="mobile-meta">Arr: 20/09<br>Dep: 28/09</td>
+              <td class="mobile-meta">23.09.2026 to<br>27.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Takeda+Teva+Ocean+Arena+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">9</td>
+              <td style="font-weight:600; color:#0F172A;">Weightlifting</td>
+              <td>Nagoya City Trade and Industry Center</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">27.4 km</span></td>
+              <td class="mobile-meta">Arr: 20/09<br>Dep: 25/09</td>
+              <td class="mobile-meta">23.09.2026 to<br>24.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Fukiage+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">10</td>
+              <td style="font-weight:600; color:#0F172A;">Wrestling</td>
+              <td>Nagoya City Inae Sports Center</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">4.8 km</span></td>
+              <td class="mobile-meta">Arr: TBC 
+(27/09)<br>Dep: TBC
+(03/10)</td>
+              <td class="mobile-meta">30.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Nagoya+City+Inae+Sports+Center&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">11</td>
+              <td style="font-weight:600; color:#0F172A;">Basketball</td>
+              <td>Kinjo Futo Station Square Venue</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">1.2 km</span></td>
+              <td class="mobile-meta">Arr: 18/09<br>Dep: 26/09</td>
+              <td class="mobile-meta">21.09.2026 to<br>25.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Kinjofuto+Station+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">12</td>
+              <td style="font-weight:600; color:#0F172A;">Wushu - Taolu: Changquan</td>
+              <td>Aichi Prefectural Martial Arts Hall</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">10.5 km</span></td>
+              <td class="mobile-meta">Arr: 14/09<br>Dep: 24/09</td>
+              <td class="mobile-meta">20.09.2026 to<br>20.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Aichi+Budokan+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">13</td>
+              <td style="font-weight:600; color:#0F172A;">Kabaddi</td>
+              <td>Tokai Citizen Gymnasium</td>
+              <td style="color:#475569;">Aichi / Nagoya / Kinjo-futo</td>
+              <td>Cruise ship</td>
+              <td style="text-align:center;"><span class="dist-badge">12.2 km</span></td>
+              <td class="mobile-meta">Arr: 19/09<br>Dep: 27/09</td>
+              <td class="mobile-meta">21.09.2026 to<br>26.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&destination=Tokai+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">14</td>
+              <td style="font-weight:600; color:#0F172A;">Beach Volleyball (Men)</td>
+              <td>Hekinan Ryokuchi Beach Court</td>
+              <td style="color:#475569;">Aichi / Chita</td>
+              <td>Chubu Centrair Hotel (Centrair Hotel)</td>
+              <td style="text-align:center;"><span class="dist-badge">22.0 km</span></td>
+              <td class="mobile-meta">Arr: 17/09<br>Dep: 04/10</td>
+              <td class="mobile-meta">20.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Centrair+Hotel+Tokoname+Aichi&destination=Hekinan+Ryokuchi+Beach+Court+Hekinan+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">—</td>
+              <td style="font-weight:600; color:#0F172A;">Beach Volleyball (Women)</td>
+              <td>—</td>
+              <td style="color:#475569;">Aichi / Chita</td>
+              <td>Chubu Centrair Hotel (Centrair Hotel)</td>
+              <td style="text-align:center;"><span class="dist-badge">22.0 km</span></td>
+              <td class="mobile-meta">Arr: 17/09<br>Dep: 03/10</td>
+              <td class="mobile-meta">20.09.2026 to<br>02.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Centrair+Hotel+Tokoname+Aichi&destination=Hekinan+Ryokuchi+Beach+Court+Hekinan+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">15</td>
+              <td style="font-weight:600; color:#0F172A;">Athletics</td>
+              <td>Nagoya City Mizuho Park
+Athletic Stadium</td>
+              <td style="color:#475569;">Aichi / Chita</td>
+              <td>Toyoko INN Chubu Centrair Airport 2</td>
+              <td style="text-align:center;"><span class="dist-badge">39.9 km</span></td>
+              <td class="mobile-meta">Arr: TBC 
+(21/09)<br>Dep: 30/09</td>
+              <td class="mobile-meta">24.09.2026 to<br>29.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Toyoko+INN+Chubu+International+Airport+No.2+Tokoname&destination=Paloma+Mizuho+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">16</td>
+              <td style="font-weight:600; color:#0F172A;">Boxing</td>
+              <td>Nishio Gymnasium</td>
+              <td style="color:#475569;">Aichi / Higashi-Mikawa</td>
+              <td>Hotel Meizansou/ Gamagori Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">21.0 km</span></td>
+              <td class="mobile-meta">Arr: TBC 
+(18/09)<br>Dep: 03/10</td>
+              <td class="mobile-meta">21.09.2026 to<br>02.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Meizanso+Gamagori+Aichi&destination=Nishio+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">17</td>
+              <td style="font-weight:600; color:#0F172A;">Karate - Kata</td>
+              <td>Toyohashi Gymnasium</td>
+              <td style="color:#475569;">Aichi / Higashi-Mikawa</td>
+              <td>Loisir Hotel Toyohashi</td>
+              <td style="text-align:center;"><span class="dist-badge">6.1 km</span></td>
+              <td class="mobile-meta">Arr: 18/09<br>Dep: 24/09</td>
+              <td class="mobile-meta">21.09.2026 to<br>21.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Loisir+Hotel+Toyohashi&destination=Toyohashi+City+General+Gymnasium&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">18</td>
+              <td style="font-weight:600; color:#0F172A;">Sailing</td>
+              <td>Kaiyoh Yacht Harbor</td>
+              <td style="color:#475569;">Aichi / Higashi-Mikawa</td>
+              <td>Henn na Hotel Laguna Ten Bosch</td>
+              <td style="text-align:center;"><span class="dist-badge">100 m</span></td>
+              <td class="mobile-meta">Arr: 20/09<br>Dep: 03/10</td>
+              <td class="mobile-meta">26.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Henn+na+Hotel+Laguna+Ten+Bosch,+Gamagori,+Aichi,+Japan/Toyota+Industries+Kaiyoh+Yacht+Harbor,+Gamagori,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">19</td>
+              <td style="font-weight:600; color:#0F172A;">Taekwondo</td>
+              <td>—</td>
+              <td style="color:#475569;">Aichi / Higashi-Mikawa</td>
+              <td>Loisir Hotel Toyohashi</td>
+              <td style="text-align:center;"><span class="dist-badge">6.1 km</span></td>
+              <td class="mobile-meta">Arr: 29/09<br>Dep: 05/10</td>
+              <td class="mobile-meta">02.10.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Loisir+Hotel+Toyohashi&destination=Toyohashi+City+General+Gymnasium&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">20</td>
+              <td style="font-weight:600; color:#0F172A;">Surfing</td>
+              <td>Pacific Long Beach (Tahara, Aichi, Japan)</td>
+              <td style="color:#475569;">Aichi / Higashi-Mikawa</td>
+              <td>Irago Ocean Resort</td>
+              <td style="text-align:center;"><span class="dist-badge">19.1 km</span></td>
+              <td class="mobile-meta">Arr: 21/09<br>Dep: 29/09</td>
+              <td class="mobile-meta">25.09.2026 to<br>28.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Irago+Ocean+Resort+Tahara+Aichi&destination=Akabane+Long+Beach+Tahara+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">21</td>
+              <td style="font-weight:600; color:#0F172A;">Badminton</td>
+              <td>Ichinomiya City Municipal Gymnasium</td>
+              <td style="color:#475569;">Aichi / Nagoya</td>
+              <td>Nagoya Tokyu Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">26.4 km</span></td>
+              <td class="mobile-meta">Arr: 21/09<br>Dep: 30/09</td>
+              <td class="mobile-meta">25.09.2026 to<br>29.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Tokyu+Hotel+Nagoya&destination=Ichinomiya+City+Municipal+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">22</td>
+              <td style="font-weight:600; color:#0F172A;">Cricket - Women</td>
+              <td>Korogi Athletic Park</td>
+              <td style="color:#475569;">Aichi / Nagoya</td>
+              <td>Meitetsu Grand Hotel/ Toyota Sports Center</td>
+              <td style="text-align:center;"><span class="dist-badge">21.1 km</span></td>
+              <td class="mobile-meta">Arr: 15/09<br>Dep: 23/09</td>
+              <td class="mobile-meta">17.09.2026 to<br>22.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Meitetsu+Grand+Hotel+Nagoya&destination=Korogi+Athletic+Park+Nisshin+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">—</td>
+              <td style="font-weight:600; color:#0F172A;">Cricket - Men</td>
+              <td>—</td>
+              <td style="color:#475569;">Aichi / Nagoya</td>
+              <td>APA Hotel <Nagoya Sakae Ekimae> EXCELLENT</td>
+              <td style="text-align:center;"><span class="dist-badge">17.4 km</span></td>
+              <td class="mobile-meta">Arr: TBC
+(25/09)<br>Dep: TBC
+(03/10)</td>
+              <td class="mobile-meta">24.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=APA+Hotel+Nagoya+Sakae+Ekimae+EXCELLENT+Nagoya&destination=Korogi+Athletic+Park+Nisshin+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">23</td>
+              <td style="font-weight:600; color:#0F172A;">Golf</td>
+              <td>Kasugai Country Club East Course</td>
+              <td style="color:#475569;">Aichi / Nagoya</td>
+              <td>Hotel JAL City Nagoya Nishiki/ Green Rich Hotel Nagoya Nishiki</td>
+              <td style="text-align:center;"><span class="dist-badge">36.4 km</span></td>
+              <td class="mobile-meta">Arr: 26/09<br>Dep: 06/10</td>
+              <td class="mobile-meta">30.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+JAL+City+Nagoya+Nishiki&destination=Kasugai+Country+Club+Kasugai+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">24</td>
+              <td style="font-weight:600; color:#0F172A;">Modern Pentathlon</td>
+              <td>Anjo Sports Park</td>
+              <td style="color:#475569;">Aichi / Nishi-Mikawa</td>
+              <td>Meitetsu Toyota Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">16.0 km</span></td>
+              <td class="mobile-meta">Arr: 13/09<br>Dep: 21/09</td>
+              <td class="mobile-meta">16.09.2026 to<br>20.09.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Meitetsu+Toyota+Hotel+Toyota+Aichi&destination=Anjo+Sports+Park+Anjo+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">25</td>
+              <td style="font-weight:600; color:#0F172A;">Hockey (Men)</td>
+              <td>Gifu Prefectural Green Stadium</td>
+              <td style="color:#475569;">Gifu</td>
+              <td>Gifu Grand Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">15.3 km</span></td>
+              <td class="mobile-meta">Arr: 16/09<br>Dep: 04/10</td>
+              <td class="mobile-meta">18.09.2026 to<br>03.10.2026</td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Gifu+Grand+Hotel+Gifu&destination=Gifu+Prefectural+Green+Stadium+Kakamigahara+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Navigate</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: OPENING CEREMONY LOGISTICS -->
+  <div id="tab-opening" class="tab-panel">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">🏟️ Opening Ceremony Transport & Logistics Directory</div>
+        <div class="section-sub"><strong>Origin / Ceremony Venue:</strong> Paloma Mizuho Stadium (Nagoya City Mizuho Park Athletic Stadium, Aichi, Japan).</div>
+      </div>
+      <div class="table-wrap">
+        <table id="openingTable">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Sports</th>
+              <th>Accommodation Venue</th>
+              <th>Arrival Date</th>
+              <th>Opening Ceremony Transport Status</th>
+              <th>Road Dist.</th>
+              <th>Est. Drive Time</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:center; font-weight:600;">1</td>
+              <td style="font-weight:600;">Modern Pentathlon</td>
+              <td>Meitetsu Toyota Hotel</td>
+              <td style="text-align:center;">13/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">28.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–40 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Meitetsu+Toyota+Hotel,+Toyota,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">2</td>
+              <td style="font-weight:600;">Wushu</td>
+              <td>Cruise Ship - Nagoya (Kinjo Pier)</td>
+              <td style="text-align:center;">14/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Nagoya+Port+Kinjo+Pier+Cruise+Terminal,+Nagoya,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">3</td>
+              <td style="font-weight:600;">Cricket - Women</td>
+              <td>Nagoya Hotel (Meitetsu Grand Hotel)</td>
+              <td style="text-align:center;">15/09</td>
+              <td><span class="status-no-service">No transport service</span></td>
+              <td style="text-align:center;"><span class="dist-badge">9.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Meitetsu+Grand+Hotel,+Nagoya,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">4</td>
+              <td style="font-weight:600;">Hockey</td>
+              <td>Gifu Hotel (Gifu Grand Hotel)</td>
+              <td style="text-align:center;">16/09</td>
+              <td><span class="status-no-service">No transport service</span></td>
+              <td style="text-align:center;"><span class="dist-badge">44.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Gifu+Grand+Hotel,+Gifu,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">5</td>
+              <td style="font-weight:600;">Aquatics - Swimming</td>
+              <td>Tokyo Bay Shiomi Prince Hotel</td>
+              <td style="text-align:center;">17/09</td>
+              <td><span class="status-no-service">No transport service</span></td>
+              <td style="text-align:center;"><span class="dist-badge">348 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4 hr 15 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Tokyo+Bay+Shiomi+Prince+Hotel,+Tokyo,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">6</td>
+              <td style="font-weight:600;">Gymnastics - Artistic Gymnastics</td>
+              <td>Cruise Ship - Nagoya (Kinjo Pier)</td>
+              <td style="text-align:center;">17/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Nagoya+Port+Kinjo+Pier+Cruise+Terminal,+Nagoya,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">7</td>
+              <td style="font-weight:600;">Rowing</td>
+              <td>Cruise Ship - Nagoya (Kinjo Pier)</td>
+              <td style="text-align:center;">17/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Nagoya+Port+Kinjo+Pier+Cruise+Terminal,+Nagoya,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">8</td>
+              <td style="font-weight:600;">Beach Volleyball</td>
+              <td>Chubu Centrair Hotel</td>
+              <td style="text-align:center;">17/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">42.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–40 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Centrair+Hotel,+Tokoname,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">9</td>
+              <td style="font-weight:600;">Karate - Kata</td>
+              <td>Loisir Hotel Toyohashi</td>
+              <td style="text-align:center;">18/09</td>
+              <td><span class="status-no-service">No transport service</span></td>
+              <td style="text-align:center;"><span class="dist-badge">68.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">55–65 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Loisir+Hotel+Toyohashi,+Toyohashi,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-weight:600;">10</td>
+              <td style="font-weight:600;">Basketball</td>
+              <td>Cruise Ship - Nagoya (Kinjo Pier)</td>
+              <td style="text-align:center;">18/09</td>
+              <td><span class="status-eligible">Eligible to participate in the Opening Ceremony</span></td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/Paloma+Mizuho+Stadium,+Nagoya,+Aichi,+Japan/Nagoya+Port+Kinjo+Pier+Cruise+Terminal,+Nagoya,+Aichi,+Japan" target="_blank" rel="noopener" class="map-btn">🗺️ Route Map</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: ATHLETES VILLAGE (NAGOYA / ARIMATSU) -->
+  <div id="tab-village" class="tab-panel">
+    
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">🏘️ Athletes Village ➔ Competition Venues Directory</div>
+        <div class="section-sub"><strong>Origin:</strong> Aeon Town Arimatsu 3F, Arimatsuura-200, Narumi, Midori Ward, Nagoya, Aichi 458-0824, Japan.</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Sport / Discipline</th>
+              <th>Competition Venue</th>
+              <th>Road Dist.</th>
+              <th>Est. Drive Time</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">Aquatics - Swimming & Diving</td>
+              <td>Tokyo Aquatics Centre (Tokyo)</td>
+              <td style="text-align:center;"><span class="dist-badge">342 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4 hr 05 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Tokyo+Aquatics+Centre&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Archery - Compound</td>
+              <td>Okazaki Chuo Sogo Park Multipurpose Square (Okazaki)</td>
+              <td style="text-align:center;"><span class="dist-badge">31.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–40 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Okazaki+Chuo+Sogo+Park+Multipurpose+Square&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Gymnastics - Artistic</td>
+              <td>Nagoya City General Gym (Nippon Gaishi Hall)</td>
+              <td style="text-align:center;"><span class="dist-badge">6.8 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">12–16 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nippon+Gaishi+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Judo</td>
+              <td>Aichi International Arena (IG Arena / Meijo Park)</td>
+              <td style="text-align:center;"><span class="dist-badge">18.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Aichi+Prefectural+Gymnasium+Meijo+Park+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Rowing</td>
+              <td>Nagaragawa Int'l Regatta Course (Kaizu, Gifu)</td>
+              <td style="text-align:center;"><span class="dist-badge">38.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nagaragawa+International+Regatta+Course+Kaizu+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Rugby Sevens</td>
+              <td>Nagoya City Mizuho Park Rugby Field</td>
+              <td style="text-align:center;"><span class="dist-badge">8.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">18–22 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Paloma+Mizuho+Rugby+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Table Tennis</td>
+              <td>SKY HALL TOYOTA (Toyota City)</td>
+              <td style="text-align:center;"><span class="dist-badge">22.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">28–35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Sky+Hall+Toyota+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Squash</td>
+              <td>Nagoya Kinjo-Futo Arena (Takeda Teva Ocean Arena)</td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Takeda+Teva+Ocean+Arena+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Weightlifting</td>
+              <td>Nagoya Trade & Industry Center (Fukiage Hall)</td>
+              <td style="text-align:center;"><span class="dist-badge">13.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">22–28 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Fukiage+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Wrestling</td>
+              <td>Nagoya City Inae Sports Center</td>
+              <td style="text-align:center;"><span class="dist-badge">13.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nagoya+City+Inae+Sports+Center&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Basketball (3x3)</td>
+              <td>Kinjo Futo Station Square Venue</td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Kinjofuto+Station+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Wushu - Taolu</td>
+              <td>Aichi Prefectural Martial Arts Hall (Aichi Budokan)</td>
+              <td style="text-align:center;"><span class="dist-badge">12.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">22–28 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Aichi+Budokan+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Kabaddi</td>
+              <td>Tokai Citizen Gymnasium (Tokai City)</td>
+              <td style="text-align:center;"><span class="dist-badge">9.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">15–18 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Tokai+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Beach Volleyball</td>
+              <td>Hekinan Ryokuchi Beach Court (Hekinan)</td>
+              <td style="text-align:center;"><span class="dist-badge">27.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">32–38 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Hekinan+Ryokuchi+Beach+Court+Hekinan+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Athletics</td>
+              <td>Paloma Mizuho Athletic Stadium (Nagoya)</td>
+              <td style="text-align:center;"><span class="dist-badge">8.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">18–22 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Paloma+Mizuho+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Boxing</td>
+              <td>Nishio Gymnasium (Nishio City)</td>
+              <td style="text-align:center;"><span class="dist-badge">31.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–42 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nishio+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Karate & Taekwondo</td>
+              <td>Toyohashi City General Gymnasium</td>
+              <td style="text-align:center;"><span class="dist-badge">58.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">50–60 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Toyohashi+City+General+Gymnasium&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Sailing</td>
+              <td>Kaiyoh Yacht Harbor (Gamagori)</td>
+              <td style="text-align:center;"><span class="dist-badge">48.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–52 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=35.067300,136.972300&destination=34.806228,137.268055&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Surfing</td>
+              <td>Pacific Long Beach (Akabane, Tahara)</td>
+              <td style="text-align:center;"><span class="dist-badge">82.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">1 hr 20 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Akabane+Long+Beach+Tahara+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Badminton</td>
+              <td>Ichinomiya City Municipal Gymnasium</td>
+              <td style="text-align:center;"><span class="dist-badge">32.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Ichinomiya+City+Municipal+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Men & Women)</td>
+              <td>Korogi Athletic Park (Nisshin City)</td>
+              <td style="text-align:center;"><span class="dist-badge">15.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">22–28 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Korogi+Athletic+Park+Nisshin+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Golf</td>
+              <td>Kasugai Country Club East Course</td>
+              <td style="text-align:center;"><span class="dist-badge">34.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">38–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Kasugai+Country+Club+Kasugai+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Modern Pentathlon</td>
+              <td>Anjo Sports Park (Anjo City)</td>
+              <td style="text-align:center;"><span class="dist-badge">20.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Anjo+Sports+Park+Anjo+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Hockey (Men)</td>
+              <td>Gifu Prefectural Green Stadium (Kakamigahara)</td>
+              <td style="text-align:center;"><span class="dist-badge">48.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Gifu+Prefectural+Green+Stadium+Kakamigahara+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">🏘️ Athletes Village ➔ Designated Accommodations Directory</div>
+        <div class="section-sub">Direct routes from Athletes Village (Arimatsu) to each team accommodation facility.</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Assigned Sport / Group</th>
+              <th>Accommodation Facility</th>
+              <th>Road Dist.</th>
+              <th>Est. Drive Time</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">Aquatics (Tokyo)</td>
+              <td>Tokyo Bay Shiomi Prince Hotel (Tokyo)</td>
+              <td style="text-align:center;"><span class="dist-badge">344 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4 hr 10 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Tokyo+Bay+Shiomi+Prince+Hotel&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Main Kinjo Pier Cluster</td>
+              <td>Cruise Ship (Nagoya Port Kinjo Pier)</td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Beach Volleyball</td>
+              <td>Chubu Centrair Hotel (Centrair Airport)</td>
+              <td style="text-align:center;"><span class="dist-badge">34.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">30–38 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Centrair+Hotel+Tokoname+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Athletics</td>
+              <td>Toyoko INN Chubu Centrair Airport 2</td>
+              <td style="text-align:center;"><span class="dist-badge">34.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">30–38 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Toyoko+INN+Chubu+International+Airport+No.2+Tokoname&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Boxing</td>
+              <td>Hotel Meizansou / Gamagori Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">46.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–52 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Hotel+Meizanso+Gamagori+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Karate & Taekwondo</td>
+              <td>Loisir Hotel Toyohashi</td>
+              <td style="text-align:center;"><span class="dist-badge">55.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">48–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Loisir+Hotel+Toyohashi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Sailing</td>
+              <td>Henn na Hotel Laguna Ten Bosch</td>
+              <td style="text-align:center;"><span class="dist-badge">49.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–52 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Henn+na+Hotel+Laguna+Ten+Bosch+Gamagori&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Surfing</td>
+              <td>Henn na Hotel Laguna Ten Bosch</td>
+              <td style="text-align:center;"><span class="dist-badge">49.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–52 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=35.067300,136.972300&destination=34.807063,137.267920&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Badminton</td>
+              <td>Nagoya Tokyu Hotel (Sakae)</td>
+              <td style="text-align:center;"><span class="dist-badge">15.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">22–28 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Nagoya+Tokyu+Hotel+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Women)</td>
+              <td>Meitetsu Grand Hotel (Nagoya Stn area)</td>
+              <td style="text-align:center;"><span class="dist-badge">17.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–32 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Meitetsu+Grand+Hotel+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Men)</td>
+              <td>APA Hotel Nagoya Sakae Ekimae EXCELLENT</td>
+              <td style="text-align:center;"><span class="dist-badge">15.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">22–28 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=APA+Hotel+Nagoya+Sakae+Ekimae+EXCELLENT+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Golf</td>
+              <td>Hotel JAL City Nagoya Nishiki / Green Rich</td>
+              <td style="text-align:center;"><span class="dist-badge">16.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">24–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Hotel+JAL+City+Nagoya+Nishiki&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Modern Pentathlon</td>
+              <td>Meitetsu Toyota Hotel (Toyota City)</td>
+              <td style="text-align:center;"><span class="dist-badge">21.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">28–35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Meitetsu+Toyota+Hotel+Toyota+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Hockey (Men)</td>
+              <td>Gifu Grand Hotel (Gifu City)</td>
+              <td style="text-align:center;"><span class="dist-badge">48.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">50–60 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Aeon+Town+Arimatsu,+Midori+Ward,+Nagoya,+Aichi+458-0824,+Japan&destination=Gifu+Grand+Hotel+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TAB 4: NAGOYA MARRIOTT ASSOCIA HOTEL -->
+  <div id="tab-marriott" class="tab-panel">
+    
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">🏨 Nagoya Marriott Associa Hotel ➔ Competition Venues</div>
+        <div class="section-sub"><strong>Origin:</strong> 1-1-4 Meieki, Nakamura Ward, Nagoya, Aichi 450-8588 (JR Nagoya Station).</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Sport / Discipline</th>
+              <th>Competition Venue</th>
+              <th>Road Dist.</th>
+              <th>Est. Drive Time</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">Aquatics - Swimming & Diving</td>
+              <td>Tokyo Aquatics Centre (Tokyo)</td>
+              <td style="text-align:center;"><span class="dist-badge">361 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4 hr 15 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Tokyo+Aquatics+Centre&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Archery - Compound</td>
+              <td>Okazaki Chuo Sogo Park Multipurpose Square (Okazaki)</td>
+              <td style="text-align:center;"><span class="dist-badge">55.2 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–50 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Okazaki+Chuo+Sogo+Park+Multipurpose+Square&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Gymnastics - Artistic</td>
+              <td>Nagoya City General Gym (Nippon Gaishi Hall)</td>
+              <td style="text-align:center;"><span class="dist-badge">16.1 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nippon+Gaishi+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Judo</td>
+              <td>Aichi International Arena (IG Arena / Meijo Park)</td>
+              <td style="text-align:center;"><span class="dist-badge">4.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">10–15 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Aichi+Prefectural+Gymnasium+Meijo+Park+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Rowing</td>
+              <td>Nagaragawa Int'l Regatta Course (Kaizu, Gifu)</td>
+              <td style="text-align:center;"><span class="dist-badge">27.3 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nagaragawa+International+Regatta+Course+Kaizu+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Rugby Sevens</td>
+              <td>Nagoya City Mizuho Park Rugby Field</td>
+              <td style="text-align:center;"><span class="dist-badge">14.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Paloma+Mizuho+Rugby+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Table Tennis</td>
+              <td>SKY HALL TOYOTA (Toyota City)</td>
+              <td style="text-align:center;"><span class="dist-badge">39.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Sky+Hall+Toyota+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Squash</td>
+              <td>Nagoya Kinjo-Futo Arena (Takeda Teva Ocean Arena)</td>
+              <td style="text-align:center;"><span class="dist-badge">22.7 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Takeda+Teva+Ocean+Arena+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Weightlifting</td>
+              <td>Nagoya Trade & Industry Center (Fukiage Hall)</td>
+              <td style="text-align:center;"><span class="dist-badge">7.7 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">15–20 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Fukiage+Hall+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Wrestling</td>
+              <td>Nagoya City Inae Sports Center</td>
+              <td style="text-align:center;"><span class="dist-badge">13.2 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nagoya+City+Inae+Sports+Center&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Basketball (3x3)</td>
+              <td>Kinjo Futo Station Square Venue</td>
+              <td style="text-align:center;"><span class="dist-badge">21.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Kinjofuto+Station+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Wushu - Taolu</td>
+              <td>Aichi Prefectural Martial Arts Hall (Aichi Budokan)</td>
+              <td style="text-align:center;"><span class="dist-badge">7.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">15–20 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Aichi+Budokan+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Kabaddi</td>
+              <td>Tokai Citizen Gymnasium (Tokai City)</td>
+              <td style="text-align:center;"><span class="dist-badge">20.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Tokai+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Beach Volleyball</td>
+              <td>Hekinan Ryokuchi Beach Court (Hekinan)</td>
+              <td style="text-align:center;"><span class="dist-badge">47.2 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Hekinan+Ryokuchi+Beach+Court+Hekinan+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Athletics</td>
+              <td>Paloma Mizuho Athletic Stadium (Nagoya)</td>
+              <td style="text-align:center;"><span class="dist-badge">13.9 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">20–25 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Paloma+Mizuho+Stadium+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Boxing</td>
+              <td>Nishio Gymnasium (Nishio City)</td>
+              <td style="text-align:center;"><span class="dist-badge">45.6 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">50–60 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nishio+City+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Karate & Taekwondo</td>
+              <td>Toyohashi City General Gymnasium</td>
+              <td style="text-align:center;"><span class="dist-badge">80.4 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">1 hr 10 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Toyohashi+City+General+Gymnasium&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Sailing</td>
+              <td>Kaiyoh Yacht Harbor (Gamagori)</td>
+              <td style="text-align:center;"><span class="dist-badge">64.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">55–65 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=35.170915,136.881537&destination=34.806228,137.268055&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Surfing</td>
+              <td>Pacific Long Beach (Akabane, Tahara)</td>
+              <td style="text-align:center;"><span class="dist-badge">104.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">1 hr 35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Akabane+Long+Beach+Tahara+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Badminton</td>
+              <td>Ichinomiya City Municipal Gymnasium</td>
+              <td style="text-align:center;"><span class="dist-badge">20.9 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Ichinomiya+City+Municipal+Gymnasium+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Men & Women)</td>
+              <td>Korogi Athletic Park (Nisshin City)</td>
+              <td style="text-align:center;"><span class="dist-badge">21.6 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">30–35 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Korogi+Athletic+Park+Nisshin+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Golf</td>
+              <td>Kasugai Country Club East Course</td>
+              <td style="text-align:center;"><span class="dist-badge">36.4 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Kasugai+Country+Club+Kasugai+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Modern Pentathlon</td>
+              <td>Anjo Sports Park (Anjo City)</td>
+              <td style="text-align:center;"><span class="dist-badge">37.1 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">40–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Anjo+Sports+Park+Anjo+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Hockey (Men)</td>
+              <td>Gifu Prefectural Green Stadium (Kakamigahara)</td>
+              <td style="text-align:center;"><span class="dist-badge">39.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">40–50 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Gifu+Prefectural+Green+Stadium+Kakamigahara+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">🏨 Nagoya Marriott Associa Hotel ➔ Designated Accommodations</div>
+        <div class="section-sub">Direct routes from Marriott Hotel to all delegation hotels and cruise ship.</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Assigned Sport / Group</th>
+              <th>Accommodation Facility</th>
+              <th>Road Dist.</th>
+              <th>Est. Drive Time</th>
+              <th>Live Navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">Aquatics (Tokyo)</td>
+              <td>Tokyo Bay Shiomi Prince Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">359 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4 hr 20 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Tokyo+Bay+Shiomi+Prince+Hotel&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Main Kinjo Pier Cluster</td>
+              <td>Cruise Ship (Nagoya Port Kinjo Pier)</td>
+              <td style="text-align:center;"><span class="dist-badge">22.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">25–30 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nagoya+Port+Kinjo+Pier+Cruise+Terminal&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Beach Volleyball</td>
+              <td>Chubu Centrair Hotel (Centrair Airport)</td>
+              <td style="text-align:center;"><span class="dist-badge">49.3 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Centrair+Hotel+Tokoname+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Athletics</td>
+              <td>Toyoko INN Chubu Centrair Airport 2</td>
+              <td style="text-align:center;"><span class="dist-badge">48.1 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Toyoko+INN+Chubu+International+Airport+No.2+Tokoname&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Boxing</td>
+              <td>Hotel Meizansou / Gamagori Hotel</td>
+              <td style="text-align:center;"><span class="dist-badge">77.1 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">55–65 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Hotel+Meizanso+Gamagori+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Karate & Taekwondo</td>
+              <td>Loisir Hotel Toyohashi</td>
+              <td style="text-align:center;"><span class="dist-badge">86.5 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">1 hr 05 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Loisir+Hotel+Toyohashi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Sailing</td>
+              <td>Henn na Hotel Laguna Ten Bosch</td>
+              <td style="text-align:center;"><span class="dist-badge">65.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">55–65 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=35.170915,136.881537&destination=34.807063,137.267920&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Surfing</td>
+              <td>Irago Ocean Resort (Tahara)</td>
+              <td style="text-align:center;"><span class="dist-badge">122 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">1 hr 45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Irago+Ocean+Resort+Tahara+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Badminton</td>
+              <td>Nagoya Tokyu Hotel (Sakae)</td>
+              <td style="text-align:center;"><span class="dist-badge">5.3 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">8–12 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Nagoya+Tokyu+Hotel+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Women)</td>
+              <td>Meitetsu Grand Hotel (Nagoya Stn area)</td>
+              <td style="text-align:center;"><span class="dist-badge">1.1 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">2–3 min walk</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Meitetsu+Grand+Hotel+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Cricket (Men)</td>
+              <td>APA Hotel Nagoya Sakae Ekimae EXCELLENT</td>
+              <td style="text-align:center;"><span class="dist-badge">2.6 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">8–12 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=APA+Hotel+Nagoya+Sakae+Ekimae+EXCELLENT+Nagoya&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Golf</td>
+              <td>Hotel JAL City Nagoya Nishiki / Green Rich</td>
+              <td style="text-align:center;"><span class="dist-badge">1.6 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">4–6 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Hotel+JAL+City+Nagoya+Nishiki&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Modern Pentathlon</td>
+              <td>Meitetsu Toyota Hotel (Toyota City)</td>
+              <td style="text-align:center;"><span class="dist-badge">39.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">35–45 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Meitetsu+Toyota+Hotel+Toyota+Aichi&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Hockey (Men)</td>
+              <td>Gifu Grand Hotel (Gifu City)</td>
+              <td style="text-align:center;"><span class="dist-badge">44.0 km</span></td>
+              <td style="text-align:center;"><span class="time-badge">45–55 min</span></td>
+              <td style="text-align:center;">
+                <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Marriott+Associa+Hotel&destination=Gifu+Grand+Hotel+Gifu&travelmode=driving" target="_blank" rel="noopener" class="map-btn">🗺️ Route</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  Asian Games 2026 (Aichi-Nagoya) Logistics Hub &bull; Sri Lanka Contingent Management &bull; Verified By-Road Driving Metrics
+</footer>
+
+<script>
+function showTab(tabId, btn) {
+  document.querySelectorAll('.tab-panel').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  document.getElementById(tabId).classList.add('active');
+  btn.classList.add('active');
+}
+
+function filterTables() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const tables = document.querySelectorAll('table');
+  
+  tables.forEach(function(tbl) {
+    const rows = tbl.querySelectorAll('tbody tr');
+    rows.forEach(function(r) {
+      const text = r.innerText.toLowerCase();
+      if (query === '' || text.includes(query)) {
+        r.style.display = '';
+      } else {
+        r.style.display = 'none';
+      }
+    });
+  });
+}
+</script>
+
+</body>
+</html>
